@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!--Enables off screen scrolling-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Content container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Poster -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/cfa" />
+
+
+            <!--Contains all menus-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Entrees -->
+                <LinearLayout
+                    android:id="@+id/etHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/etHeaderLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:padding="16dp"
+                        android:text="Entrees"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/etArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="16dp"
+                        android:src="@android:drawable/arrow_down_float"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/etMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+
+                    <!--CFA Sandwich-->
+                    <TextView
+                        android:id="@+id/cfaSandwich"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start|center_vertical"
+                        android:padding="16dp"
+                        android:text="Chick-fil-A® Chicken Sandwich\n\n 420 Cal per Sandwich\n\n Our original recipe for almost 60 years. A boneless breast of chicken seasoned to perfection, freshly breaded, pressure cooked in 100% refined peanut oil and served on a toasted, buttery bun with dill pickle chips." />
+
+                    <ImageView
+                        android:id="@+id/cfaSandwichImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/cfa_sand" />
+
+                    <!--CFA Deluxe-->
+
+                    <TextView
+                        android:id="@+id/cfaDeluxe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start|center_vertical"
+                        android:padding="16dp"
+                        android:text="Chick-fil-A® Deluxe Sandwich\n\n490 Cal per Sandwich\n\nA boneless breast of chicken seasoned to perfection, freshly breaded, pressure cooked in 100% refined peanut oil and served on a toasted, buttered bun with dill pickle chips, green leaf lettuce, tomato and American cheese. Also available on a multigrain bun." />
+
+                    <ImageView
+                        android:id="@+id/cfaDeluxeImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/cfa_del" />
+
+                    <!--Spicy Sandwich-->
+
+                    <TextView
+                        android:id="@+id/spicySandwich"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:padding="16dp"
+                        android:text="Spicy Chicken Sandwich\n\n450 Cal per Sandwich\n\nA boneless breast of chicken seasoned with a spicy blend of peppers, freshly breaded, pressure cooked in 100% refined peanut oil and served on a toasted, buttered bun with dill pickle chips. Also available on a multigrain bun." />
+
+                    <ImageView
+                        android:id="@+id/spicySandwichImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:padding="8dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/cfa_spicy" />
+
+                    <!--Spicy Deluxe-->
+                    <TextView
+                        android:id="@+id/spicyDeluxe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:padding="16dp"
+                        android:text="Spicy Deluxe Sandwich\n\n520 Cal per Sandwich\n\nA boneless breast of chicken seasoned with a spicy blend of peppers, hand-breaded, pressure cooked in 100% refined peanut oil and served on a toasted, buttery bun with dill pickle chips, green leaf lettuce, tomato and Pepper Jack Cheese." />
+
+                    <ImageView
+                        android:id="@+id/spicyDeluxeImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:padding="8dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/cfa_spicydel" />
+
+                    <!--Nuggets-->
+                    <TextView
+                        android:id="@+id/cfaNugg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:padding="16dp"
+                        android:text="Chick-fil-A® Nuggets\n\n250 Cal per Entree\n\nBite-sized pieces of boneless chicken breast, seasoned to perfection, freshly breaded and pressure cooked in 100% refined peanut oil. Available with choice of dipping sauce." />
+
+                    <ImageView
+                        android:id="@+id/cfaNuggImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:padding="8dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/cfa_nugg" />
+
+                </LinearLayout>
+
+                <!-- Salads -->
+                <LinearLayout
+                    android:id="@+id/saladsHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/saladsHeaderLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="16dp"
+                        android:text="Salads"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/saladsArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="16dp"
+                        android:src="@android:drawable/arrow_down_float"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/saladsMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <!-- Cobb Salad -->
+                    <TextView
+                        android:id="@+id/saladCobb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:padding="16dp"
+                        android:text="Cobb Salad\n\n520 Cal per Salad (includes toppings and dressing)\n\nChick-fil-A® Nuggets, freshly breaded and pressure-cooked, sliced and served on a fresh bed of mixed greens, topped with roasted corn kernels, a blend of shredded Monterey Jack and Cheddar cheeses, crumbled bacon, sliced hard-boiled egg and grape tomatoes. Prepared fresh daily. Served with Charred Tomato and Crispy Red Bell Peppers. Pairs well with Avocado Lime Ranch dressing." />
+
+                    <ImageView
+                        android:id="@+id/saladCobbImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:padding="8dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/cfa_cobb" />
+
+                    <!-- Spicy Southwest Salad -->
+
+                    <TextView
+                        android:id="@+id/saladSouthwest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:padding="16dp"
+                        android:text="Spicy Southwest Salad\n\n390 Cal per Salad (includes toppings and dressing)\n\nSlices of grilled spicy chicken breast served on a fresh bed of mixed greens, topped with grape tomatoes, a blend of Monterey Jack and Cheddar cheeses, and a zesty combination of roasted corn, black beans, poblano chiles, and red bell peppers. Prepared fresh daily. Served with Seasoned Tortilla Strips and Chili Lime Pepitas. Pairs well with Creamy Salsa dressing." />
+
+                    <ImageView
+                        android:id="@+id/saladSouthwestImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:padding="8dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/cfa_southwest" />
+
+                    <!-- Market Salad -->
+
+                    <TextView
+                        android:id="@+id/saladMarket"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:padding="16dp"
+                        android:text="Market Salad\n\n320 Cal per Salad (includes toppings and dressing)\n\nSliced grilled chicken breast served on a fresh bed of mixed greens, topped with crumbled blue cheese and a mix of red and green apples, strawberries and blueberries. Prepared fresh daily. Served with Harvest Nut Granola and Roasted Almonds. Pairs well with Zesty Apple Cider Vinaigrette." />
+
+                    <ImageView
+                        android:id="@+id/saladMarketImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:padding="8dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/cfa_market" />
+                </LinearLayout>
+
+                <!-- Sides -->
+                <LinearLayout
+                    android:id="@+id/sidesHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/sidesHeaderLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:padding="16dp"
+                        android:text="Sides"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/sidesArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="16dp"
+                        android:src="@android:drawable/arrow_down_float"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/wednesdayMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <!-- Fries -->
+
+                    <TextView
+                        android:id="@+id/fries"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start|center_vertical"
+                        android:padding="16dp"
+                        android:text="Chick-fil-A Waffle Potato Fries®\n\n420 Cal per Serving\n\nWaffle-cut potatoes cooked in canola oil until cripsy outside and tender inside. Sprinkled with Sea Salt." />
+
+                    <ImageView
+                        android:id="@+id/wednesdayBreakfastImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:padding="8dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/cfa_fries" />
+
+                    <!-- Fruit Cup -->
+
+                    <TextView
+                        android:id="@+id/fruit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start|center_vertical"
+                        android:padding="16dp"
+                        android:text="Fruit Cup\n\n70 Cal per Serving\n\nA nutritious fruit mix made with chopped pieces of red and green apples, mandarin orange segments, fresh strawberry slices, and blueberries, served chilled. Prepared fresh daily." />
+
+                    <ImageView
+                        android:id="@+id/fruitImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:padding="8dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/cfa_fruit" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
