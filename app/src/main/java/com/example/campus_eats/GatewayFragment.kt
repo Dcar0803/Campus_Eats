@@ -5,19 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [GatewayFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class GatewayFragment : Fragment() {
-    // TODO: Rename and change types of parameters
+
     private var param1: String? = null
     private var param2: String? = null
 
@@ -33,20 +27,67 @@ class GatewayFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_gateway, container, false)
+        val view = inflater.inflate(R.layout.fragment_gateway, container, false)
+
+        // Get references to header layouts and corresponding menu layouts
+        val thursdayHeader = view.findViewById<LinearLayout>(R.id.thursdayHeader)
+        val fridayHeader = view.findViewById<LinearLayout>(R.id.fridayHeader)
+        val saturdayHeader = view.findViewById<LinearLayout>(R.id.saturdayHeader)
+        val sundayHeader = view.findViewById<LinearLayout>(R.id.sundayHeader)
+        val mondayHeader = view.findViewById<LinearLayout>(R.id.mondayHeader)
+        val tuesdayHeader = view.findViewById<LinearLayout>(R.id.tuesdayHeader)
+        val wednesdayHeader = view.findViewById<LinearLayout>(R.id.wednesdayHeader)
+
+        val thursdayMenu = view.findViewById<LinearLayout>(R.id.thursdayMenu)
+        val fridayMenu = view.findViewById<LinearLayout>(R.id.fridayMenu)
+        val saturdayMenu = view.findViewById<LinearLayout>(R.id.saturdayMenu)
+        val sundayMenu = view.findViewById<LinearLayout>(R.id.sundayMenu)
+        val mondayMenu = view.findViewById<LinearLayout>(R.id.mondayMenu)
+        val tuesdayMenu = view.findViewById<LinearLayout>(R.id.tuesdayMenu)
+        val wednesdayMenu = view.findViewById<LinearLayout>(R.id.wednesdayMenu)
+
+        // Set OnClickListener for each header
+        thursdayHeader.setOnClickListener {
+            toggleMenuVisibility(thursdayMenu)
+        }
+
+        fridayHeader.setOnClickListener {
+            toggleMenuVisibility(fridayMenu)
+        }
+
+        saturdayHeader.setOnClickListener {
+            toggleMenuVisibility(saturdayMenu)
+        }
+
+        sundayHeader.setOnClickListener {
+            toggleMenuVisibility(sundayMenu)
+        }
+
+        mondayHeader.setOnClickListener {
+            toggleMenuVisibility(mondayMenu)
+        }
+        tuesdayHeader.setOnClickListener {
+            toggleMenuVisibility(tuesdayMenu)
+        }
+
+        wednesdayHeader.setOnClickListener {
+            toggleMenuVisibility(wednesdayMenu)
+        }
+
+
+        return view
+    }
+
+    // Function to toggle visibility of menu items
+    private fun toggleMenuVisibility(menu: LinearLayout) {
+        if (menu.visibility == View.VISIBLE) {
+            menu.visibility = View.GONE
+        } else {
+            menu.visibility = View.VISIBLE
+        }
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment GatewayFragment.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             GatewayFragment().apply {

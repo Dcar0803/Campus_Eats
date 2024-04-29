@@ -296,6 +296,7 @@
 
                         <!-- First item -->
                         <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/LocationsBtn"
                             android:layout_width="0dp"
                             android:layout_weight="0.5"
                             android:layout_height="170dp"

@@ -13,8 +13,8 @@ import com.google.firebase.database.FirebaseDatabase
 
 class ProfileFragment : Fragment() {
     private lateinit var editTextName: EditText
-    private lateinit var editTextPassword: EditText
-    private lateinit var buttonChangePassword: Button
+    //private lateinit var editTextPassword: EditText
+    //private lateinit var buttonChangePassword: Button
     private lateinit var buttonSaveProfile: Button
     private lateinit var firebaseAuth: FirebaseAuth
 
@@ -25,16 +25,16 @@ class ProfileFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_profile, container, false)
 
         editTextName = view.findViewById(R.id.editTextName)
-        editTextPassword = view.findViewById(R.id.editTextPassword)
-        buttonChangePassword = view.findViewById(R.id.buttonChangePassword)
+        //editTextPassword = view.findViewById(R.id.editTextPassword)
+        //buttonChangePassword = view.findViewById(R.id.buttonChangePassword)
         buttonSaveProfile = view.findViewById(R.id.buttonSaveProfile)
         firebaseAuth = FirebaseAuth.getInstance()
 
         // Set up click listeners
-        buttonChangePassword.setOnClickListener {
+        //buttonChangePassword.setOnClickListener {
             // Call a function to change password
-            changePassword()
-        }
+         //   changePassword()
+       // }
 
         buttonSaveProfile.setOnClickListener {
             // Call a function to save profile information
@@ -44,7 +44,7 @@ class ProfileFragment : Fragment() {
         return view
     }
 
-    private fun changePassword() {
+   /* private fun changePassword() {
         // Get new password from editTextPassword
         val newPassword = editTextPassword.text.toString()
 
@@ -62,7 +62,7 @@ class ProfileFragment : Fragment() {
         } else {
             // Display an error message or prompt the user to enter a password
         }
-    }
+    } */
 
     private fun saveProfile() {
         // Get new name from editTextName

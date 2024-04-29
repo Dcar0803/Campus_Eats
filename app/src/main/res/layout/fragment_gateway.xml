@@ -1,9 +1,926 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/JonesFirstLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF612F"
+        android:orientation="vertical"
+        android:paddingBottom="15dp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#003585">
+
+            <TextView
+                android:id="@+id/Gatewaytext"
+                android:layout_width="187dp"
+                android:layout_height="85dp"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/coustard"
+                android:text="Welcome To \n   Gateway"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+
+
+        <!--Enables off screen scrolling-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Content container -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Hours image views -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/gateway_hours" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:text="Scroll to see the week's menu"
+                    android:textAlignment="center"
+                    android:textSize="25dp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:maxWidth="50dp"
+                    android:maxHeight="50dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/gateway" />
+
+
+                <!--Contains all days-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Monday -->
+                    <LinearLayout
+                        android:id="@+id/mondayHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/mondayHeaderLabel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start|center_vertical"
+                            android:padding="16dp"
+                            android:text="Monday"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/mondayArrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|center_vertical"
+                            android:paddingTop="8dp"
+                            android:paddingEnd="16dp"
+                            android:src="@android:drawable/arrow_down_float"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mondayMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/mondayBreakfastLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="8dp"
+                            android:text="Breakfast" />
+
+                        <TextView
+                            android:id="@+id/mondayBreakfast"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:padding="16dp"
+                            android:text="Scrambled eggs, sausage, bacon, french toast" />
+
+                        <ImageView
+                            android:id="@+id/mondayBreakfastImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:padding="8dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/gateway_b_monday" />
+
+                        <!-- Lunch -->
+                        <TextView
+                            android:id="@+id/mondayLunchLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="30dp"
+                            android:text="Lunch" />
+
+                        <TextView
+                            android:id="@+id/mondayLunch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:padding="16dp"
+                            android:text="Jamaican brown stew chicken, smashed potatoes, fish sandwich" />
+
+                        <ImageView
+                            android:id="@+id/mondayLunchImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:padding="8dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/gateway_l_monday" />
+
+                        <!-- Dinner -->
+                        <TextView
+                            android:id="@+id/mondayDinnerLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="27dp"
+                            android:text="Dinner" />
+
+                        <TextView
+                            android:id="@+id/mondayDinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start|center_vertical"
+                            android:padding="16dp"
+                            android:text="BBQ pork loin, garlic orzo, fish sandwich" />
+
+                        <ImageView
+                            android:id="@+id/mondayDinnerImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:padding="8dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/gateway_d_monday" />
+                    </LinearLayout>
+
+                    <!-- Tuesday -->
+                    <LinearLayout
+                        android:id="@+id/tuesdayHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tuesdayHeaderLabel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="16dp"
+                            android:text="Tuesday"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/tuesdayArrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:paddingTop="8dp"
+                            android:paddingEnd="16dp"
+                            android:src="@android:drawable/arrow_down_float"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tuesdayMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tuesdayBreakfastLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="8dp"
+                            android:text="Breakfast" />
+
+                        <TextView
+                            android:id="@+id/tuesdayBreakfast"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start|center_vertical"
+                            android:padding="16dp"
+                            android:text="Scrambled eggs, bacon, sausage, pancakes" />
+
+                        <ImageView
+                            android:id="@+id/tuesdayBreakfastImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:padding="8dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/gateway_b_tuesday" />
+
+                        <!-- Lunch -->
+                        <TextView
+                            android:id="@+id/tuesdayLunchLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="30dp"
+                            android:text="Lunch" />
+
+                        <TextView
+                            android:id="@+id/tuesdayLunch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start|center_vertical"
+                            android:padding="16dp"
+                            android:text="Blackened salmon, roasted red potatoes, beef tacos" />
+
+                        <ImageView
+                            android:id="@+id/tuesdayLunchImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:padding="8dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/gateway_l_tuesday" />
+
+                        <!-- Dinner -->
+                        <TextView
+                            android:id="@+id/tuesdayDinnerLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="27dp"
+                            android:text="Dinner" />
+
+                        <TextView
+                            android:id="@+id/tuesdayDinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start|center_vertical"
+                            android:padding="16dp"
+                            android:text="BBQ brisket, baked sweet potato, beef tacos" />
+
+                        <ImageView
+                            android:id="@+id/tuesdayDinnerImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:padding="8dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/gateway_d_tuesday" />
+                    </LinearLayout>
+
+                    <!-- Wednesday -->
+                    <LinearLayout
+                        android:id="@+id/wednesdayHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/wednesdayHeaderLabel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start|center_vertical"
+                            android:padding="16dp"
+                            android:text="Wednesday"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/wednesdayArrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|center_vertical"
+                            android:paddingTop="8dp"
+                            android:paddingEnd="16dp"
+                            android:src="@android:drawable/arrow_down_float"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/wednesdayMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/wednesdayBreakfastLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="8dp"
+                            android:text="Breakfast" />
+
+                        <TextView
+                            android:id="@+id/wednesdayBreakfast"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:padding="16dp"
+                            android:text="Scrambled eggs, bacon, sausage, pancakes" />
+
+                        <ImageView
+                            android:id="@+id/wednesdayBreakfastImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:padding="8dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/gateway_b_wednesday" />
+
+                        <!-- Lunch -->
+                        <TextView
+                            android:id="@+id/wednesdayLunchLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="30dp"
+                            android:text="Lunch" />
+
+                        <TextView
+                            android:id="@+id/wednesdayLunch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:padding="16dp"
+                            android:text="Soul Food Wednesday: Fried chicken, mac n cheese, collard greens, yams" />
+
+                        <ImageView
+                            android:id="@+id/wednesdayLunchImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:padding="8dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/gateway_l_wednesday" />
+
+                        <!-- Dinner -->
+                        <TextView
+                            android:id="@+id/wednesdayDinnerLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="27dp"
+                            android:text="Dinner" />
+
+                        <TextView
+                            android:id="@+id/wednesdayDinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start|center_vertical"
+                            android:padding="16dp"
+                            android:text="Grilled chicken, mashed potatoes, BBQ chicken quesadillas" />
+
+                        <ImageView
+                            android:id="@+id/wednesdayDinnerImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:padding="8dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/gateway_d_wednesday" />
+                    </LinearLayout>
+                    <!-- Thursday -->
+                    <LinearLayout
+                        android:id="@+id/thursdayHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/thursdayHeaderLabel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start|center_vertical"
+                            android:padding="16dp"
+                            android:text="Thursday"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/thursdayArrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|center_vertical"
+                            android:paddingTop="8dp"
+                            android:paddingEnd="16dp"
+                            android:src="@android:drawable/arrow_down_float"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/thursdayMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/thursdayBreakfastLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="8dp"
+                            android:text="Breakfast" />
+
+                        <TextView
+                            android:id="@+id/thursdayBreakfast"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:padding="16dp"
+                            android:text="Scrambled eggs, bacon, sausage, pancakes" />
+
+                        <ImageView
+                            android:id="@+id/thursdayBreakfastImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:padding="8dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/gateway_b_thursday" />
+
+                        <!-- Lunch -->
+                        <TextView
+                            android:id="@+id/thursdayLunchLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="30dp"
+                            android:text="Lunch" />
+
+                        <TextView
+                            android:id="@+id/thursdayLunch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:padding="16dp"
+                            android:text="Pork chops, Lyonnaise potatoes, rotel dip" />
+
+                        <ImageView
+                            android:id="@+id/thursdayLunchImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:padding="8dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/gateway_l_thursday" />
+
+                        <!-- Dinner -->
+                        <TextView
+                            android:id="@+id/thursdayDinnerLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="27dp"
+                            android:text="Dinner" />
+
+                        <TextView
+                            android:id="@+id/thursdayDinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start|center_vertical"
+                            android:padding="16dp"
+                            android:text="Chicken fricassee, buttered noodles, green beans" />
+
+                        <ImageView
+                            android:id="@+id/thursdayDinnerImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:padding="8dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/gateway_d_thursday" />
+                    </LinearLayout>
+                    <!-- Friday -->
+                    <LinearLayout
+                        android:id="@+id/fridayHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/fridayHeaderLabel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start|center_vertical"
+                            android:padding="16dp"
+                            android:text="Friday"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/fridayArrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|center_vertical"
+                            android:paddingTop="8dp"
+                            android:paddingEnd="16dp"
+                            android:src="@android:drawable/arrow_down_float"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/fridayMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/fridayBreakfastLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="8dp"
+                            android:text="Breakfast" />
+
+                        <TextView
+                            android:id="@+id/fridayBreakfast"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:padding="16dp"
+                            android:text="Scrambled eggs, sausage, bacon, french toast" />
+
+                        <ImageView
+                            android:id="@+id/fridayBreakfastImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:padding="8dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/gateway_b_friday" />
+
+                        <!-- Lunch -->
+                        <TextView
+                            android:id="@+id/fridayLunchLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="30dp"
+                            android:text="Lunch" />
+
+                        <TextView
+                            android:id="@+id/fridayLunch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:padding="16dp"
+                            android:text="Country fried steak, broccoli, hot dogs" />
+
+                        <ImageView
+                            android:id="@+id/fridayLunchImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:padding="8dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/gateway_l_friday" />
+
+                        <!-- Dinner -->
+                        <TextView
+                            android:id="@+id/fridayDinnerLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="27dp"
+                            android:text="Dinner" />
+
+                        <TextView
+                            android:id="@+id/fridayDinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start|center_vertical"
+                            android:padding="16dp"
+                            android:text="Fried Fish Friday: Fried fish, cheese grits, hushpuppies" />
+
+                        <ImageView
+                            android:id="@+id/fridayDinnerImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:padding="8dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/gateway_d_friday" />
+                    </LinearLayout>
+
+                    <!--Saturday-->
+                    <LinearLayout
+                        android:id="@+id/saturdayHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/saturdayHeaderLabel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start|center_vertical"
+                            android:padding="16dp"
+                            android:text="Saturday"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/saturdayArrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|center_vertical"
+                            android:paddingTop="8dp"
+                            android:paddingEnd="16dp"
+                            android:src="@android:drawable/arrow_down_float"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/saturdayMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/saturdayBreakfastLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="8dp"
+                            android:text="Breakfast" />
+
+                        <TextView
+                            android:id="@+id/saturdayBreakfast"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:padding="16dp"
+                            android:text="Scrambled eggs, pancakes, bacon, sausage" />
+
+                        <ImageView
+                            android:id="@+id/saturdayBreakfastImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:padding="8dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/gateway_b_saturday" />
+
+                        <!-- Lunch -->
+                        <TextView
+                            android:id="@+id/saturdayLunchLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="30dp"
+                            android:text="Lunch" />
+
+                        <TextView
+                            android:id="@+id/saturdayLunch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:padding="16dp"
+                            android:text="Beef balognese, spaghetti, garlic bread" />
+
+                        <ImageView
+                            android:id="@+id/saturdayLunchImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:padding="8dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/gateway_l_saturday" />
+
+                        <!-- Dinner -->
+                        <TextView
+                            android:id="@+id/saturdayDinnerLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="27dp"
+                            android:text="Dinner" />
+
+                        <TextView
+                            android:id="@+id/saturdayDinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start|center_vertical"
+                            android:padding="16dp"
+                            android:text="Pork loin, baked sweet potatoes, grilled zucchini" />
+
+                        <ImageView
+                            android:id="@+id/saturdayDinnerImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:padding="8dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/gateway_d_saturday" />
+                    </LinearLayout>
+
+                    <!--Sunday-->
+                    <LinearLayout
+                        android:id="@+id/sundayHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/sundayHeaderLabel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start|center_vertical"
+                            android:padding="16dp"
+                            android:text="Sunday"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/sundayArrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|center_vertical"
+                            android:paddingTop="8dp"
+                            android:paddingEnd="16dp"
+                            android:src="@android:drawable/arrow_down_float"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/sundayMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/sundayBreakfastLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="8dp"
+                            android:text="Breakfast" />
+
+                        <TextView
+                            android:id="@+id/sundayBreakfast"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:padding="16dp"
+                            android:text="Scrambled egs, bacon, pancakes, grits" />
+
+                        <ImageView
+                            android:id="@+id/sundayBreakfastImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:padding="8dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/gateway_b_sunday" />
+
+                        <!-- Lunch -->
+                        <TextView
+                            android:id="@+id/sundayLunchLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="30dp"
+                            android:text="Lunch" />
+
+                        <TextView
+                            android:id="@+id/sundayLunch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:padding="16dp"
+                            android:text="Honey shrimp, jasmine rice, bok choy" />
+
+                        <ImageView
+                            android:id="@+id/sundayLunchImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:padding="8dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/gateway_l_sunday" />
+
+                        <!-- Dinner -->
+                        <TextView
+                            android:id="@+id/sundayDinnerLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="27dp"
+                            android:text="Dinner" />
+
+                        <TextView
+                            android:id="@+id/sundayDinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start|center_vertical"
+                            android:padding="16dp"
+                            android:text="Spanish garlic chicken, cilantro lime brown rice, garlic green beans" />
+
+                        <ImageView
+                            android:id="@+id/sundayDinnerImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:padding="8dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/gateway_d_sunday" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

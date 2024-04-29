@@ -32,20 +32,26 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Find the ConstraintLayout with id JonesBtn
+        // Find the ConstraintLayout with id
         val jonesBtn = view.findViewById<ConstraintLayout>(R.id.JonesBtn)
         val gatewayBtn = view.findViewById<ConstraintLayout>(R.id.GatewayBtn)
+        val locationsBtn = view.findViewById<ConstraintLayout>(R.id.LocationsBtn)
 
         // Set click listener on JonesBtn
         jonesBtn.setOnClickListener {
-            // Replace current fragment with JonesFragment
+
             replaceFragment(JonesFragment())
         }
 
         // Set click listener on JonesBtn
         gatewayBtn.setOnClickListener {
-            // Replace current fragment with JonesFragment
+
             replaceFragment(GatewayFragment())
+        }
+
+        //Set click listener on LocationsBtn
+        locationsBtn.setOnClickListener{
+            replaceFragment(LocationsFragment())
         }
 
     }

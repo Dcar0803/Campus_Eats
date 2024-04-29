@@ -15,8 +15,9 @@
             android:id="@+id/radioButtonJones"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:checked="true"
             android:text="Jones"
-            android:checked="true" />
+            android:textColorLink="@color/blue" />
 
         <RadioButton
             android:id="@+id/radioButtonGateway"
@@ -27,9 +28,12 @@
 
     <RatingBar
         android:id="@+id/ratingBar"
+        style="@style/CustomRatingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
+
+        android:backgroundTint="@color/orange"
         android:numStars="5"
         android:rating="0" />
 
@@ -37,6 +41,7 @@
         android:id="@+id/editTextReview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/orange"
         android:hint="Write your review here"
         android:inputType="textMultiLine"
         android:minLines="3" />
